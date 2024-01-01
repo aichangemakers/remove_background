@@ -1,4 +1,3 @@
-from IPython.display import Image as ImgDisplay
 from PIL import Image
 from rembg import remove
 import streamlit as st
