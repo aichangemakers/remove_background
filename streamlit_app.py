@@ -7,8 +7,9 @@ import streamlit as st
 ---
 """
 image = st.file_uploader('Chargez votre image ici', type=['jpeg', 'jpg', 'png'])
-choix_modifier = st.sidebar.checkbox('Cochez cette case si vous voulez modifier la taille de l\'image sans background')
-if image is not None:
+if image is not None :
+    st.image(image, caption='Image avec background')
+    choix_modifier = st.sidebar.checkbox('Cochez cette case si vous voulez modifier la taille de l\'image sans background')
     if choix_modifier  :
         with st.spinner('En cours de traitement ...'):
             largeur = st.sidebar.slider('Choisissez une valeur pour la largeur', max_value=1024, min_value=640)
@@ -28,4 +29,3 @@ if image is not None:
             st.image(output_img, caption='Image sans background avec la taille originale')
             with open("Resultat.png", "rb") as file:
                 btn = st.download_button(label="Download image",data=file,file_name="Result.png",mime="image/png")
-
