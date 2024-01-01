@@ -7,6 +7,7 @@ import streamlit as st
 ---
 """
 image = st.file_uploader('Chargez votre image ici', type=['jpeg', 'jpg', 'png'])
+choix_modifier = st.sidebar.checkbox('Cochez cette case si vous voulez modifier la taille de l\'image sans background')
 if image is not None:
     if choix_modifier  :
         with st.spinner('En cours de traitement ...'):
