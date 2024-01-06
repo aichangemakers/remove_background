@@ -2,6 +2,8 @@ from PIL import Image
 from rembg import remove
 import streamlit as st
 
+st.set_page_config(page_title='AI-Changemakers | Removal Background', layout='wide')
+
 """
 ## Removal background by [AIChangeMakers](https://www.linkedin.com/company/ai-changemakers/)
 ---
